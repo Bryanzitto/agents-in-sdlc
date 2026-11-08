@@ -53,7 +53,7 @@ CLI 핵심 작업 흐름을 마쳤습니다. 이제 컨텍스트 관리, 모델 
    ```
 
 2. 사용 가능한 모델과 사용 정보를 살펴봅니다.
-3. 현재 모델을 유지하거나 다른 모델을 선택합니다. 목록을 닫으려면 <kbd>Esc</kbd>를 누릅니다.
+3. 현재 모델을 유지하거나 다른 모델을 선택하고, 목록을 닫으려면 <kbd>Esc</kbd>를 누릅니다.
 
 ## 세션 공유하기
 
@@ -77,7 +77,7 @@ CLI 핵심 작업 흐름을 마쳤습니다. 이제 컨텍스트 관리, 모델 
 
 ## 요약 및 다음 단계
 
-Copilot CLI의 슬래시 명령을 사용해 도구를 구성하고 세션을 공유하고 내부 상태를 확인했습니다. 이 레슨에서는 다음을 수행했습니다.
+Copilot CLI에서 슬래시 명령을 사용해 도구를 구성하고 세션을 공유하고 내부 상태를 확인했습니다. 이 레슨에서는 다음을 수행했습니다.
 
 - `/context`와 `/compact`로 Copilot이 대화 컨텍스트를 관리하는 방식을 살펴봤습니다.
 - `/model`로 사용할 수 있는 모델을 확인했습니다.
@@ -93,7 +93,7 @@ Copilot CLI에서 사용할 수 있는 명령과 기능은 더 많습니다. 다
 - [Copilot cloud agent 정보][about-cloud-agent]
 
 [previous-lesson]: ../8-create-pull-request/
-[next-lesson]: ../10-review/
+[next-lesson]: ../9-review/
 [cli-reference]: https://docs.github.com/copilot/reference/copilot-cli-reference/cli-command-reference
 [context-management]: https://docs.github.com/copilot/concepts/agents/copilot-cli/context-management
 [about-cloud-agent]: https://docs.github.com/copilot/concepts/agents/cloud-agent/about-cloud-agent

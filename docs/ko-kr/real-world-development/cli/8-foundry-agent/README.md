@@ -74,7 +74,7 @@ Tailspin Toys는 후원자가 대화를 통해 게임을 찾도록 돕는 **Back
 [project-model]: 1-project-and-model/
 [build-deploy]: 2-build-and-deploy/
 [connect-site]: 3-connect-to-site/
-[review]: ../10-review/
+[review]: ../9-review/
 [cleanup]: #리소스-정리하기
 [azure-skills]: https://github.com/microsoft/azure-skills#github-copilot-cli
 [foundry-skill]: https://learn.microsoft.com/azure/foundry/how-to/develop/use-microsoft-foundry-skill?tabs=copilot-cli

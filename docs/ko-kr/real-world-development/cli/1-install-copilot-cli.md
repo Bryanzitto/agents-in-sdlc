@@ -133,7 +133,7 @@ Copilot은 대화를 자동으로 저장합니다. 이후 지침을 바꾸거나
 - [Copilot CLI 명령 참조][cli-reference]
 
 [previous-lesson]: ../0-prerequisites/
-[next-lesson]: ../2-add-star-rating/
+[next-lesson]: ../2-custom-instructions/
 [install-cli]: https://docs.github.com/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli
 [about-copilot-cli]: https://docs.github.com/copilot/concepts/agents/about-copilot-cli
 [cli-reference]: https://docs.github.com/copilot/reference/copilot-cli-reference/cli-command-reference

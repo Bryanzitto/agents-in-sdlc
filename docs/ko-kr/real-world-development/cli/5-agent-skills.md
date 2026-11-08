@@ -46,7 +46,7 @@ Copilot CLI에서 스킬을 직접 호출하거나 자연어로 요청할 수 �
 2. 다음 프롬프트를 입력합니다.
 
    ```plaintext
-   quality-checks 스킬을 실행해 단위 테스트, 린트, 타입 검사를 수행해 주세요.
+   Run the quality-checks skill for unit tests, lint, and type checks.
    ```
 
 3. 마지막에 표시되는 보고서를 살펴봅니다.
@@ -61,7 +61,7 @@ Copilot CLI에서 스킬을 직접 호출하거나 자연어로 요청할 수 �
    ```markdown
    ## 결과 보고 형식
 
-   작업이 끝나면 실행한 각 명령과 통과, 실패, 차단 여부를 보고합니다. 도구에서 보고한 경우에만 테스트 수, 실행 시간, 오류, 경고, 기타 측정값을 포함합니다. 실패 또는 차단된 항목에 대한 다음 조치를 제시하고, 건너뛰거나 완료되지 않은 검사를 통과한 것으로 설명하지 않습니다.
+   Upon completion, report each command that ran and whether it passed, failed, or was blocked. Include test counts, durations, errors, warnings, and other metrics only when the tool reports them. Identify the next action for any failure or blocker, and never describe a skipped or incomplete check as passed.
    ```
 
 3. 파일이 자동으로 저장됩니다.
@@ -79,7 +79,7 @@ Copilot CLI에서 스킬을 직접 호출하거나 자연어로 요청할 수 �
 2. 이전과 동일한 프롬프트를 입력합니다.
 
    ```plaintext
-   quality-checks 스킬을 실행해 단위 테스트, 린트, 타입 검사를 수행해 주세요.
+   Run the quality-checks skill for unit tests, lint, and type checks.
    ```
 
 3. 마지막에 표시되는 보고서를 살펴보고 첫 번째 보고서와 비교합니다.
@@ -92,7 +92,7 @@ Copilot CLI에서 스킬을 직접 호출하거나 자연어로 요청할 수 �
 - 결과 보고 형식을 사용자 지정했습니다.
 - 스킬을 새로 불러오고 실행했습니다.
 
-이 변경 사항은 필터링 기능 PR에 포함됩니다. 다음으로 [Playwright MCP 서버][next-lesson]를 사용해 Copilot이 사이트와 상호 작용하도록 합니다.
+이 변경 사항은 필터링 기능 PR에 포함됩니다. 다음으로 [Playwright MCP 서버][next-lesson]를 사용해 Copilot이 사이트와 직접 상호 작용하도록 합니다.
 
 ## 추가 스킬 예제
 
@@ -104,8 +104,8 @@ Copilot CLI에서 스킬을 직접 호출하거나 자연어로 요청할 수 �
 - [다이어그램 및 내보내기 스크립트: `drawio`][drawio-example]
 - [브라우저 테스트: `webapp-testing`][browser-example]
 
-[previous-lesson]: ../4-custom-instructions/
-[next-lesson]: ../6-mcp-playwright/
+[previous-lesson]: ../2-custom-instructions/
+[next-lesson]: ../4-mcp/
 [skill-spec]: https://agentskills.io/specification
 [contribution-example]: https://github.com/github/awesome-copilot/tree/main/skills/make-repo-contribution
 [prd-example]: https://github.com/github/awesome-copilot/tree/main/skills/prd

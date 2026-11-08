@@ -6,7 +6,7 @@ authors:
 lastUpdated: 2026-09-18
 ---
 
-생성형 AI를 사용할 때 컨텍스트가 중요합니다. 특정 방식으로 작업해야 한다면 Copilot이 해당 지침을 사용할 수 있어야 합니다. [지침 파일][instruction-files]은 원하는 코드뿐 아니라 코드 구성 방식도 설명합니다. 필터링 기능을 만든 뒤 Copilot이 사용한 지침을 살펴보고 문서 표준을 추가해 코드에 적용합니다.
+생성형 AI를 사용할 때 컨텍스트가 중요합니다. 특정 방식으로 작업해야 한다면 Copilot에서 해당 지침을 사용할 수 있어야 합니다. [지침 파일][instruction-files]은 원하는 코드뿐 아니라 코드 구성 방식도 설명합니다. 이제 필터링 기능을 만들었으므로 Copilot이 사용한 지침을 살펴보고 문서화 표준을 추가해 코드에 적용합니다.
 
 이 레슨에서는 다음을 수행합니다.
 
@@ -18,8 +18,8 @@ lastUpdated: 2026-09-18
 
 Tailspin Toys에는 개발 관행을 위한 지침과 요구 사항이 있습니다.
 
-- 주석은 코드 내용을 반복하지 않고 의도나 명확하지 않은 결정을 설명해야 합니다.
-- `db/`와 `src/lib/`에서 내보내는 함수에는 목적, 매개 변수, 반환 값이 포함된 TSDoc/JSDoc을 작성해야 합니다. `db`를 인수로 전달할 수 있다면 문서에 이를 포함해야 합니다.
+- 주석은 코드를 반복하지 않고 의도나 명확하지 않은 결정을 설명해야 합니다.
+- `db/`와 `src/lib/`에서 내보내는 함수에는 목적, 매개 변수, 반환 값, 해당하는 경우 주입 가능한 `db` 인수를 포함한 TSDoc/JSDoc을 작성해야 합니다.
 - 재사용 가능한 Astro 컴포넌트에는 `Props` 계약을 설명해야 하며, 관련 코드가 바뀌면 주석도 최신 상태로 유지해야 합니다.
 - 기존 서식 및 린트 지침을 유지해야 합니다.
 
@@ -27,19 +27,19 @@ Tailspin Toys에는 개발 관행을 위한 지침과 요구 사항이 있습니
 
 ## 지침 파일
 
-사용자 지정 지침은 Copilot에 컨텍스트와 선호 사항을 제공하여 코딩 스타일과 요구 사항을 더 잘 이해하도록 합니다. 코딩 규칙, 라이브러리, 포함하려는 주석 유형을 지정할 수 있습니다. 리포지토리 전체 또는 특정 파일 유형에 적용되는 작업별 지침 파일을 만들 수 있습니다.
+사용자 지정 지침을 사용하면 Copilot에 컨텍스트와 선호 사항을 제공해 코딩 스타일과 요구 사항을 더 잘 이해하도록 할 수 있습니다. 선호하는 코딩 규칙, 라이브러리, 포함할 주석 유형을 지정할 수 있습니다. 전체 리포지토리 또는 특정 파일 유형에 적용되는 작업별 지침 파일을 만들 수 있습니다.
 
 지침 파일에는 두 가지 유형이 있습니다.
 
 - `.github/copilot-instructions.md`는 리포지토리의 **모든** 요청에 Copilot이 사용하는 단일 지침 파일입니다. 대부분의 요청에 관련된 프로젝트 수준 정보를 작성합니다.
-- `.github/instructions/*.instructions.md` 파일은 특정 언어, 파일 유형, 작업에 대한 지침을 제공합니다.
+- `.github/instructions/*.instructions.md` 파일은 특정 언어, 파일 유형 또는 작업에 대한 지침을 제공합니다.
 
 > [!NOTE]
-> 지침 파일 형식과 지원 범위는 환경에 따라 다를 수 있습니다. 특정 형식에 의존하기 전에 [사용자 지정 지침 지원 참조][custom-instructions-support]를 확인합니다.
+> 다른 지침 형식과 지원 범위는 환경에 따라 다릅니다. 특정 형식에 의존하기 전에 [사용자 지정 지침 지원 참조][custom-instructions-support]를 확인합니다.
 
 ## 이 프로젝트의 사용자 지정 지침 파일 살펴보기
 
-시작을 돕기 위해 스타터 프로젝트에 지침 파일 모음이 포함되어 있습니다. 변경 전에 기존 파일을 살펴보고 지침의 영향을 확인합니다.
+시작을 돕기 위해 스타터 프로젝트에 지침 파일 모음이 포함되어 있습니다. 변경 전에 기존 파일을 살펴보고 영향을 확인합니다.
 
 1. Codespace로 돌아갑니다.
 2. Codespaces 편집기에서 터미널이 아니라 `.github/copilot-instructions.md`를 엽니다.
@@ -56,7 +56,7 @@ Tailspin Toys에는 개발 관행을 위한 지침과 요구 사항이 있습니
 2. 마지막 항목으로 다음을 추가합니다.
 
    ```markdown
-   - 새 TypeScript 코드에는 문서화를 위한 TSDoc 주석을 작성합니다.
+   - All new TypeScript should contain TSDocs comments for documentation purposes.
    ```
 
 파일이 자동으로 저장됩니다.
@@ -76,7 +76,7 @@ Copilot CLI는 대화를 시작할 때 리포지토리 지침을 불러옵니다
 3. 다음 프롬프트로 Copilot에 업데이트된 지침을 적용하도록 요청합니다.
 
    ```plaintext
-   방금 지침과 코드 작성 지침을 업데이트했습니다. 생성한 코드에 새 지침을 적용해 주시겠어요?
+   We just updated our instructions and code guidance. Can you please update the code you generated to match that guidance?
    ```
 
 4. `/diff`를 입력하고 변경된 TypeScript 파일을 확인합니다. 새로 생성된 TSDoc 주석이 코드 동작을 정확히 설명하는지 살펴봅니다.
@@ -102,5 +102,5 @@ Copilot이 지침 파일을 적용하는 방식을 살펴보고 새 프로젝트
 [instructions-best-practices]: https://docs.github.com/copilot/concepts/prompting/response-customization#writing-effective-custom-instructions
 [awesome-copilot]: https://awesome-copilot.github.com/
 [custom-instructions-support]: https://docs.github.com/copilot/reference/custom-instructions-support
-[previous-lesson]: ../3-agent-modes/
+[previous-lesson]: ../3-generating-code/
 [next-lesson]: ../5-agent-skills/
